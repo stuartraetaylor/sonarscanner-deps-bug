@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        flatDir dirs: 'lib'
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.sonarsource.scanner.gradle', name: 'sonarqube-gradle-plugin', version: '3.0-SNAPSHOT'
+        classpath 'org.sonarsource.scanner.api:sonar-scanner-api:2.16.0.226'
+    }
+}
+
+plugins {
+    id 'java-library'
+}
+
+apply plugin: 'org.sonarqube'
+
